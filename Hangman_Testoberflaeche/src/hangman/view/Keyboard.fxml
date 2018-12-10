@@ -4,17 +4,29 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane gridLinesVisible="true" onKeyPressed="#keyPressed" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.view.KeyboardController">
+<GridPane alignment="CENTER" onKeyPressed="#keyPressed" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.view.KeyboardController">
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
    </columnConstraints>
    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />

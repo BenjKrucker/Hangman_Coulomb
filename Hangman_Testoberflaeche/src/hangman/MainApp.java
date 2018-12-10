@@ -1,7 +1,6 @@
 package hangman;
 
 import java.io.IOException;
-
 import java.util.ArrayList;
 import hangman.model.Key;
 import hangman.util.Alphabet;
@@ -20,7 +19,7 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
-	
+
 
 	public static ArrayList<Key> button  = new ArrayList<Key>();
 
@@ -42,15 +41,15 @@ public class MainApp extends Application {
 
 		this.primaryStage.setTitle("Hangman");
 
-		
+
 
 		//this.primaryStage.getIcons().add(new Image("file:resources/images/hangman.png"));
 
-		
+
 
 		initRootLayout();
 
-		
+
 
 		//Set the Hangman, Keybard and Wordspace.
 
@@ -64,13 +63,13 @@ public class MainApp extends Application {
 
 	}
 
-	
 
-    /**
 
-     * Initializes the root layout.
+	/**
 
-     */
+	 * Initializes the root layout.
+
+	 */
 
 	private void initRootLayout() {
 
@@ -80,7 +79,7 @@ public class MainApp extends Application {
 
 			FXMLLoader loader = new FXMLLoader();
 
-			 loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
+			loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
 
 			rootLayout = (BorderPane) loader.load();
 
@@ -100,7 +99,7 @@ public class MainApp extends Application {
 
 			controller.setMainApp(this);
 
-			
+
 
 			primaryStage.show();
 
@@ -116,108 +115,100 @@ public class MainApp extends Application {
 
 	}
 
-	
+
 
 	public void showKeyboard() {
 
-        try {
+		try {
 
-            // Load Keyboard view.
+			// Load Keyboard view.
 
-        	 FXMLLoader loader = new FXMLLoader();
+			FXMLLoader loader = new FXMLLoader();
 
-             loader.setLocation(MainApp.class.getResource("view/Keyboard.fxml"));
+			loader.setLocation(MainApp.class.getResource("view/Keyboard.fxml"));
 
-             keyboard = (GridPane) loader.load();
-
-             
-
-             // Set Keyboard view into the bottom of root layout.
-
-             rootLayout.setBottom(keyboard);
-
-             
-
-             KeyboardController controller = loader.getController();
-
-             controller.setMainApp(this);
+			keyboard = (GridPane) loader.load();
 
 
 
-        } catch (IOException e) {
-
-            e.printStackTrace();
-
-        }
-
-    }
-
-	
-
-	public void showButton(){
-
-		
-
-		int z = 0;
-
-		
-
-		 for(int j = 0; j < 4; j++){
-
-			 for(int i = 0; i < 7; i++){
-		
-			z = i+j*7;
-
-			button.add(z,new Key());			
-			
-			System.out.println(button.size());
 			// Set Keyboard view into the bottom of root layout.
 
-           if(z>0 && z<27) {
-
-        	   button.set(z,new Key(Alphabet.getLetter(z-1)));
-
-			keyboard.add(button.get(z),i, j);
-
-           }
-
-            // Give the controller access to the main app.
-
-			}
+			rootLayout.setBottom(keyboard);
 
 
 
-			}
+			KeyboardController controller = loader.getController();
 
-		
+			controller.setMainApp(this);
+
+
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
 
 		}
 
-	
+	}
+
+
+
+	public void showButton(){
+
+
+		//z= gridfield counter
+		int z = 0;
+		//l=Button Array counter
+		int l = 0;
+		//Sprungvariable
+		int a = 2;
+		
+		for(int j = 0; j < 4; j++){
+			if (a==2) { a--;}
+			else {a++;}
+			for(int i = 0; i < 7; i++){
+
+				z = i+j*7;
+
+				// Create Keys and set it in the keyboard view.
+
+				if(z>0 && z<27) {
+					button.add(l,new Key(Alphabet.getLetter(l)));        	  
+					keyboard.add(button.get(l),2*i+a, j);
+					l++;
+				}
+
+			}
+
+		}
+
+	}
+
+
 
 
 
 	/**
 
-     * Returns the main stage.
+	 * Returns the main stage.
 
-     * @return
+	 * @return
 
-     */
+	 */
 
-    public Stage getPrimaryStage() {
+	public Stage getPrimaryStage() {
 
-        return primaryStage;
+		return primaryStage;
 
-    }
+	}
 
 
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        launch(args);
+		launch(args);
 
-    }
+	}
 
 
 

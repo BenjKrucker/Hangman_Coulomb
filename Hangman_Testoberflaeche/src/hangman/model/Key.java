@@ -4,13 +4,9 @@ package hangman.model;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.input.KeyEvent;
-import hangman.view.KeyboardController;
 import hangman.MainApp;
-import hangman.util.Alphabet;
-import javafx.scene.input.KeyEvent;
+
 
 
 public class Key extends Button {
@@ -30,7 +26,7 @@ public class Key extends Button {
 		String s = Character.toString(letter);
 			
 		this.setText(s);
-
+		this.setPrefWidth(35);
 		this.setId(s);
 
 		
@@ -46,7 +42,7 @@ public class Key extends Button {
 	
 	public static void setKeyDisable(int i) {
 		
-		MainApp.button.get(i+1).setDisable(true);
+		MainApp.button.get(i).setDisable(true);
 		
 	}
 }
