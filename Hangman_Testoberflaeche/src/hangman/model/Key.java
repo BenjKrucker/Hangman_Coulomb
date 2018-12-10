@@ -7,8 +7,6 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import hangman.MainApp;
 
-
-
 public class Key extends Button {
 
 	char identity;

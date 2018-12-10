@@ -1,9 +1,6 @@
 package hangman.view;
 
 
-
-
-
 import hangman.MainApp;
 import hangman.model.Key;
 import hangman.util.Alphabet;

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="CENTER" onKeyPressed="#keyPressed" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.view.KeyboardController">
+<GridPane alignment="CENTER" onKeyPressed="#keyPressed" prefHeight="150.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.view.KeyboardController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
