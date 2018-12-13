@@ -6,9 +6,11 @@ import hangman.model.Key;
 import hangman.util.Alphabet;
 import hangman.view.KeyboardController;
 import hangman.view.RootLayoutController;
+import hangman.view.WordspaceController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -27,6 +29,7 @@ public class MainApp extends Application {
 
 	private GridPane keyboard;
 
+	private AnchorPane wordSpace;
 
 
 	@Override
@@ -47,7 +50,7 @@ public class MainApp extends Application {
 
 		initRootLayout();
 
-
+		
 
 		//Set the Hangman, Keybard and Wordspace.
 
@@ -57,7 +60,7 @@ public class MainApp extends Application {
 
 		//ShowHangman();
 
-		//ShowWordspace();
+		showWordspace();
 
 	}
 
@@ -100,8 +103,7 @@ public class MainApp extends Application {
 
 
 			primaryStage.show();
-
-
+			
 
 		}catch(IOException e) {
 
@@ -148,6 +150,43 @@ public class MainApp extends Application {
 		}
 
 	}
+	
+	public void showWordspace() {
+		try {
+
+			// Load Wordspace view.
+
+			FXMLLoader loader = new FXMLLoader();
+
+			loader.setLocation(MainApp.class.getResource("view/Wordspace.fxml"));
+
+			wordSpace = (AnchorPane) loader.load();
+			
+			//wordSpace.setPrefSize(50, 50);
+
+
+
+			// Set Wordspace view into the bottom of root layout.
+
+			rootLayout.setRight(wordSpace);
+
+
+
+			WordspaceController controller = loader.getController();
+
+			controller.setMainApp(this);
+
+
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+		
+	
 
 
 

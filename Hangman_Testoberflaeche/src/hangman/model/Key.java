@@ -43,4 +43,13 @@ public class Key extends Button {
 		MainApp.button.get(i).setDisable(true);
 		
 	}
+
+	public char getIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(char identity) {
+		this.identity = identity;
+	}
+	
 }
