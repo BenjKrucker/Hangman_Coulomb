@@ -3,15 +3,9 @@ package hangman.view;
 
 
 import hangman.MainApp;
-import hangman.view.KeyboardController;
-import hangman.model.Key;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-
+import javafx.scene.control.TextField;
 
 
 public class WordspaceController {
@@ -22,6 +16,9 @@ public class WordspaceController {
  
     @FXML
     private Label guessWord;
+    
+    @FXML
+    private TextField wordInput;
     
 	private MainApp mainApp;
 	
@@ -91,6 +88,18 @@ public class WordspaceController {
     	
     	//return "Gulasch";
     }
+	public static void testNewLetter(char letter) {
+		
+		/*du bekommst hier den Buchstaben und sollst das label aktualisiere
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		
+	}
     
     
 	
