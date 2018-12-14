@@ -1,3 +1,4 @@
+
 package hangman.model;
 
 
@@ -54,4 +55,5 @@ public class Key extends Button {
 		this.identity = identity;
 	}
 	
+
 }
