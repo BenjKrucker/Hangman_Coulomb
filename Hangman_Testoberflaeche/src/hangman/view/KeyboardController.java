@@ -29,7 +29,9 @@ public class KeyboardController {
 			char letter = x.charAt(0);
 
 			Key.setKeyDisable(Alphabet.getNummber(letter));
-
+			//Alphabet d = new Alphabet();
+			//Key c = new Key();
+			//c.setKeyDisable(d.getNummber(letter));
 		}
 
 	}

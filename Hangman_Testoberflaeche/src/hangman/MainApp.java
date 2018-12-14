@@ -67,9 +67,7 @@ public class MainApp extends Application {
 
 
 	/**
-
 	 * Initializes the root layout.
-
 	 */
 
 	private void initRootLayout() {
@@ -226,11 +224,8 @@ public class MainApp extends Application {
 
 
 	/**
-
 	 * Returns the main stage.
-
 	 * @return
-
 	 */
 
 	public Stage getPrimaryStage() {
