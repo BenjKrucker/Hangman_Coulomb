@@ -94,6 +94,7 @@ public class WordspaceController {
 	public void testNewLetter(char letter) {
 		
 		int counter = 0;
+		int counterCorrectLetters=0;
 		
 
 		String letterChoice = Character.toString(letter);
@@ -103,8 +104,11 @@ public class WordspaceController {
 		for (int j = 0; j < 2 * word.length(); j = j + 2) {
 			if (input.get(j).equals(letterChoice)) {
 				guess.set(j, letterChoice);
+				counterCorrectLetters++;
 			}
-			else {counter++;}
+			else {
+				counter++;
+				}
 		}
 		
 		//bring counter to picture

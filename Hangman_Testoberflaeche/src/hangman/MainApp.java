@@ -30,6 +30,8 @@ public class MainApp extends Application {
 	private GridPane keyboard;
 
 	private AnchorPane wordSpace;
+	
+	
 	public static WordspaceController controller1;
 	
 
@@ -60,7 +62,7 @@ public class MainApp extends Application {
 
 		showButton();
 
-		//ShowHangman();
+		//showMaennli(11);
 
 		showWordspace();
 
@@ -150,6 +152,8 @@ public class MainApp extends Application {
 		}
 
 	}
+	
+
 	
 	public void showWordspace() {
 		try {
