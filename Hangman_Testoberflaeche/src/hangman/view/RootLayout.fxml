@@ -29,12 +29,8 @@
       </MenuBar>
    </top>
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
-   </right>
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
-   </left>
-   <center>
+
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </center>
+   </right>
+
 </BorderPane>

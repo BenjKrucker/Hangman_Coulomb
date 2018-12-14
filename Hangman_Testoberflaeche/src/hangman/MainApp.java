@@ -21,6 +21,7 @@ public class MainApp extends Application {
 	public static ArrayList<Key> button = new ArrayList<Key>();
 	private Stage primaryStage;
 	private BorderPane rootLayout;
+
 	private GridPane keyboard;	
 	private AnchorPane maennliPane;
 	private AnchorPane wordSpace;
@@ -28,8 +29,6 @@ public class MainApp extends Application {
 	public static MaennliController maennli;
 	
 	
-
-
 	@Override
 
 	public void start(Stage primaryStage) throws Exception {
@@ -42,11 +41,12 @@ public class MainApp extends Application {
 
 		initRootLayout();
 		
-
 		// Set the Hangman, Keybard and Wordspace.
+
 
 		showKeyboard();
 		showButton();
+
 		
 		showMaennli(0);
 		
@@ -99,8 +99,10 @@ public class MainApp extends Application {
 			controller.setMainApp(this);
 
 			primaryStage.show();
+			
 
-		} catch (IOException e) {
+		}catch(IOException e) {
+
 
 			e.printStackTrace();
 
@@ -165,6 +167,36 @@ public class MainApp extends Application {
 			// Load Wordspace view.
 
 			FXMLLoader loader = new FXMLLoader();
+
+			loader.setLocation(MainApp.class.getResource("view/Wordspace.fxml"));
+
+			wordSpace = (AnchorPane) loader.load();
+			
+			//wordSpace.setPrefSize(50, 50);
+
+
+
+			// Set Wordspace view into the bottom of root layout.
+
+			rootLayout.setRight(wordSpace);
+
+
+
+			WordspaceController controller = loader.getController();
+
+			controller.setMainApp(this);
+
+
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+		
+	
 
 			loader.setLocation(MainApp.class.getResource("view/Wordspace.fxml"));
 

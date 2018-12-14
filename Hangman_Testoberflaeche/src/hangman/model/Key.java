@@ -1,3 +1,4 @@
+
 package hangman.model;
 
 
@@ -34,17 +35,16 @@ public class Key extends Button {
 
 			@Override
 			public void handle(ActionEvent e) {
-				setKeyDisable(identity);
+				setKeyDisable(Alphabet.getNummber(letter));
 			};
 		});
 		
 	}
-
-public void setKeyDisable(char letter) {
+	
+	public static void setKeyDisable(int i) {
 		
-		setDisable(true);
-		MainApp.controller1.testNewLetter(letter);
-		
+		MainApp.button.get(i).setDisable(true);
+		WordspaceController.testNewLetter(Alphabet.getLetter(i));
 	}
 
 	public char getIdentity() {
@@ -55,4 +55,5 @@ public void setKeyDisable(char letter) {
 		this.identity = identity;
 	}
 	
+
 }

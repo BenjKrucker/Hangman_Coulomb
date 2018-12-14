@@ -12,9 +12,9 @@
             <Font size="18.0" />
          </font></TextField>
        <Label fx:id="guessWord" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="126.0" prefHeight="43.0" prefWidth="284.0" style="-fx-padding:10;" text="dsfds" textAlignment="CENTER">
+
          <font>
             <Font size="18.0" />
          </font></Label>
    </children>
 </AnchorPane>
-

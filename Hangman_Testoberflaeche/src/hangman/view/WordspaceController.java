@@ -1,5 +1,6 @@
 package hangman.view;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import hangman.MainApp;
@@ -126,3 +127,4 @@ public class WordspaceController {
 	
 
 }
+
