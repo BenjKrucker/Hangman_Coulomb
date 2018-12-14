@@ -7,6 +7,7 @@ import hangman.util.Alphabet;
 import hangman.view.KeyboardController;
 import hangman.view.MaennliController;
 import hangman.view.RootLayoutController;
+import hangman.view.WordspaceController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,6 +23,10 @@ public class MainApp extends Application {
 	private BorderPane rootLayout;
 	private GridPane keyboard;	
 	private AnchorPane maennliPane;
+	private AnchorPane wordSpace;
+	public static WordspaceController controller1;
+	public static MaennliController maennli;
+	
 	
 
 
@@ -43,7 +48,7 @@ public class MainApp extends Application {
 		showKeyboard();
 		showButton();
 		
-		showMaennli(11);
+		showMaennli(0);
 		
 			/*  @Simon - Um Maennli zu malen: 
 			 * 
@@ -59,7 +64,7 @@ public class MainApp extends Application {
 			 *
 			 */ 
 
-		// ShowWordspace();
+		 showWordspace();
 
 	}
 
@@ -140,11 +145,48 @@ public class MainApp extends Application {
 			maennliPane = (AnchorPane) loader.load();
 			rootLayout.setLeft(maennliPane);
 
-			MaennliController maennliController = loader.getController();
-			maennliController.setMainApp(this);
+			maennli = loader.getController();
+			maennli.setMainApp(this);
 			
-			maennliController.updateMaennli(stage);		//Diese Zeile nach Einführung von Zähler löschen!
+			//maennliController.updateMaennli(stage);		//Diese Zeile nach Einführung von Zähler löschen!
 			
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+	
+	public void showWordspace() {
+		try {
+
+			// Load Wordspace view.
+
+			FXMLLoader loader = new FXMLLoader();
+
+			loader.setLocation(MainApp.class.getResource("view/Wordspace.fxml"));
+
+			wordSpace = (AnchorPane) loader.load();
+			
+			//wordSpace.setPrefSize(50, 50);
+
+
+
+			// Set Wordspace view into the bottom of root layout.
+
+			rootLayout.setRight(wordSpace);
+
+
+
+			controller1 = loader.getController();
+			
+		
+
+			controller1.setMainApp(this);
+
+
 
 		} catch (IOException e) {
 
