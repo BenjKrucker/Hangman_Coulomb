@@ -8,7 +8,6 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import hangman.MainApp;
 import hangman.util.Alphabet;
-import hangman.view.WordspaceController;
 
 public class Key extends Button {
 
@@ -44,7 +43,7 @@ public class Key extends Button {
 	public void setKeyDisable(int i) {
 		
 		MainApp.button.get(i).setDisable(true);
-		WordspaceController.testNewLetter(Alphabet.getLetter(i));
+		MainApp.controller1.testNewLetter(Alphabet.getLetter(i));
 	}
 
 	public char getIdentity() {

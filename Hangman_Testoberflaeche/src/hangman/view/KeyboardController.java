@@ -2,7 +2,6 @@ package hangman.view;
 
 
 import hangman.MainApp;
-import hangman.model.Key;
 import hangman.util.Alphabet;
 import javafx.fxml.FXML;
 import javafx.scene.input.KeyEvent;
@@ -30,11 +29,8 @@ public class KeyboardController {
 
 			char letter = x.charAt(0);
 
-			MainApp.button.get(Alphabet.getNummber(letter)).setKeyDisable(letter);
-			//Key.setKeyDisable(letter);
-			//Alphabet d = new Alphabet();
-			//Key c = new Key();
-			//c.setKeyDisable(d.getNummber(letter));
+			MainApp.button.get(Alphabet.getNummber(letter)).setKeyDisable(Alphabet.getNummber(letter));
+			
 
 		}
 
