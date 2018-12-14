@@ -34,16 +34,17 @@ public class Key extends Button {
 
 			@Override
 			public void handle(ActionEvent e) {
-				setKeyDisable(Alphabet.getNummber(letter));
+				setKeyDisable(identity);
 			};
 		});
 		
 	}
-	
-	public static void setKeyDisable(int i) {
+
+public void setKeyDisable(char letter) {
 		
-		MainApp.button.get(i).setDisable(true);
-		WordspaceController.testNewLetter(Alphabet.getLetter(i));
+		setDisable(true);
+		MainApp.controller1.testNewLetter(letter);
+		
 	}
 
 	public char getIdentity() {

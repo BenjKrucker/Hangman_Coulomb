@@ -30,6 +30,8 @@ public class MainApp extends Application {
 	private GridPane keyboard;
 
 	private AnchorPane wordSpace;
+	public static WordspaceController controller1;
+	
 
 
 	@Override
@@ -170,9 +172,11 @@ public class MainApp extends Application {
 
 
 
-			WordspaceController controller = loader.getController();
+			controller1 = loader.getController();
+			
+		
 
-			controller.setMainApp(this);
+			controller1.setMainApp(this);
 
 
 

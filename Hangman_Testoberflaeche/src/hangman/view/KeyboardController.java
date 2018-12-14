@@ -17,6 +17,8 @@ public class KeyboardController {
 		this.mainApp = mainApp; 
 
 	}
+	
+	static char test;
 
 	@FXML
 
@@ -28,14 +30,15 @@ public class KeyboardController {
 
 			char letter = x.charAt(0);
 
-			Key.setKeyDisable(Alphabet.getNummber(letter));
+			MainApp.button.get(Alphabet.getNummber(letter)).setKeyDisable(letter);
+			//Key.setKeyDisable(letter);
 			//Alphabet d = new Alphabet();
 			//Key c = new Key();
 			//c.setKeyDisable(d.getNummber(letter));
+
 		}
 
 	}
-
 
 
 }

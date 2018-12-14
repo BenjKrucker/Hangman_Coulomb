@@ -18,9 +18,13 @@ public class WordspaceController {
 	static String word = "Beispiel";
 	static ArrayList<String> input = new ArrayList<String>();
 	static ArrayList<String> guess = new ArrayList<String>();
+	//Key test = new Key();
 
 	@FXML
 	public Label guessWord;
+	
+	//@ FXML
+	//public Textfield wordToGuess;
 
 	private MainApp mainApp;
 
@@ -37,7 +41,8 @@ public class WordspaceController {
 	@FXML
 	private void initialize() {
 		convertInput();
-		setWordUpdate(createEmptyWord());
+		createEmptyWord();
+		setWordUpdate("Give a word to guess!");
 	}
 
 	// set word
@@ -50,7 +55,7 @@ public class WordspaceController {
 	private void convertInput() {
 
 		// include value from word library here
-		// word = " --------- "
+		 //word = " Beispiel ";
 
 		// convert word into char with spaces between letters
 		for (int n = 0; n < 2 * word.length(); n = n + 2) {
@@ -80,8 +85,14 @@ public class WordspaceController {
 		System.out.println(output);
 		return output;
 	}
+	
 
-	public static void testNewLetter(char letter) {
+	public void testNewLetter(char letter) {
+		
+		//  Counter !!
+		
+		//char letter = test.getIdentity();
+		
 		// char letterChoice = key;
 		String letterChoice = Character.toString(letter);
 		// String letterChoice = String.valueOf(letter);
@@ -98,7 +109,7 @@ public class WordspaceController {
 		String outcome = String.join("", guess);
 		System.out.println(outcome);
 		//setWordUpdate(outcome);
-		//guessWord.setText(outcome);
+		guessWord.setText(outcome);
 		
 	}
 
