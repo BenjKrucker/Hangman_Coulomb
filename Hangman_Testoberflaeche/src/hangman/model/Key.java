@@ -41,7 +41,7 @@ public class Key extends Button {
 		
 	}
 	
-	public static void setKeyDisable(int i) {
+	public void setKeyDisable(int i) {
 		
 		MainApp.button.get(i).setDisable(true);
 		WordspaceController.testNewLetter(Alphabet.getLetter(i));
