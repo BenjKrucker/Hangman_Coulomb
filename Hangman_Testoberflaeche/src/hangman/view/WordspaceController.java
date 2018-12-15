@@ -56,7 +56,7 @@ public class WordspaceController {
 	// initialize
 	@FXML
 	private void initialize() {
-		
+		wordToGuess.setPromptText("Optionale Worteingabe");
 		guessWord.setText("Give a word to guess!");
 		MainApp.maennli.updateMaennli(0);
 	}
