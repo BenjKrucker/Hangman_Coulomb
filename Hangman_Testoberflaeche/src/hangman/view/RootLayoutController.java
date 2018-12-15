@@ -19,4 +19,7 @@ public class RootLayoutController {
     	mainApp.resetGame();
     }
 
+    public void handleClose() {
+        System.exit(0);
+    }
 }
