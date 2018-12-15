@@ -246,6 +246,16 @@ public class MainApp extends Application {
 		return primaryStage;
 
 	}
+	
+	public void resetGame() {
+		controller1.resetArraylists();
+		showMaennli(0);
+		showKeyboard();
+		showKeyboard();
+		showButton();
+		showWordspace();
+		
+	}
 
 	public static void main(String[] args) {
 

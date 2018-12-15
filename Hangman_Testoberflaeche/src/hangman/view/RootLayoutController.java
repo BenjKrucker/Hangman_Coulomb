@@ -14,5 +14,9 @@ public class RootLayoutController {
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
+    
+    public void handleNewGame() {
+    	mainApp.resetGame();
+    }
 
 }

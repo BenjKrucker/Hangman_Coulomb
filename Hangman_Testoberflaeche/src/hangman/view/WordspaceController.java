@@ -122,6 +122,10 @@ public class WordspaceController {
 		MainApp.maennli.updateMaennli(counter); //counter einfügen
 	}
 
+	public static void resetArraylists() {
+		input.clear();
+		guess.clear();
+	}
 	
 	
 	
